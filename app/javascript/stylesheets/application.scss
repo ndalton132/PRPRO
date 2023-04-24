@@ -1,0 +1,30 @@
+@import "~bootstrap/scss/bootstrap";
+
+.button-group{
+    color: white;
+}
+
+table{
+    font-size: 34px;
+    margin-top: 35vh;
+}
+
+.titledesc{
+    font-size: 21px;
+}
+
+.main-page{
+    background-color: lightgray;
+}
+
+.graph{
+    display: flex;
+    justify-content:center;
+    height: 100%;
+}
+
+.picture{
+    max-width: 90%;
+    height: auto;
+    
+}
