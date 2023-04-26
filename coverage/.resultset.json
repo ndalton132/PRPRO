@@ -1,0 +1,143 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/root/PRPRO/app/controllers/projects_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          9,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          3,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          3,
+          null,
+          3,
+          3,
+          2,
+          1,
+          null,
+          4,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          3,
+          3,
+          2,
+          1,
+          null,
+          4,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          9,
+          null,
+          null,
+          null,
+          1,
+          6,
+          null,
+          null
+        ]
+      },
+      "/root/PRPRO/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/root/PRPRO/app/models/project.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/root/PRPRO/app/helpers/application_helper.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/root/PRPRO/app/helpers/projects_helper.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/root/PRPRO/app/mailers/application_mailer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/root/PRPRO/app/models/application_record.rb": {
+        "lines": [
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/root/PRPRO/app/models/user.rb": {
+        "lines": [
+          0,
+          null,
+          null,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      }
+    },
+    "timestamp": 1682470567
+  }
+}
