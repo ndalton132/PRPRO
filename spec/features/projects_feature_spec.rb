@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.feature "Projects", type: :feature do
     context "Update project" do
-      let(:project) { Project.create(title: "Test title", description: "Test content") }
+      let(:project) { Project.create(title: "Test title", description: "Test content", one: "123",two:"123") }
       before(:each) do
         user = FactoryBot.create(:user)
         login_as(user)
@@ -15,6 +15,8 @@ RSpec.feature "Projects", type: :feature do
         within("form") do
           fill_in "Title", with: "stuff"
           fill_in "Description", with: "New description content"
+          fill_in "One", with: "123"
+          fill_in "Two", with: "123"
         end
     
         click_button "Update Project"
@@ -68,7 +70,7 @@ RSpec.feature "Projects", type: :feature do
 
 
     context "Create project" do
-      let(:project) { Project.create(title: "Test title", description: "Test content") }
+      let(:project) { Project.create(title: "Test title", description: "Test content", one: "123",two:"123") }
       before(:each) do
         user = FactoryBot.create(:user)
         login_as(user)
@@ -80,6 +82,8 @@ RSpec.feature "Projects", type: :feature do
         within("form") do
           fill_in "Title", with: "This is the title"
           fill_in "Description", with: "New description content"
+          fill_in "One", with: "123"
+          fill_in "Two", with: "123"
         end
         click_button "Create Project"
         expect(page).to have_content("Project was successfully created.")
@@ -96,6 +100,17 @@ RSpec.feature "Projects", type: :feature do
 
       scenario "should fail" do
         within("form") do
+          fill_in "Title", with: "helo"
+          fill_in "Description", with: "New description content"
+          fill_in "One", with: ""
+          fill_in "Two", with: "123"
+        end
+        click_button "Create Project"
+        expect(page).to have_content("One can't be blank")
+      end
+
+      scenario "should fail" do
+        within("form") do
           fill_in "Title", with: ""
         end
         click_button "Create Project"
@@ -107,7 +122,7 @@ end
 RSpec.feature "Projects", type: :feature do
 
     context "Delete Project" do
-      let(:project) { Project.create(title: "Test title", description: "Test content") }
+      let(:project) { Project.create(title: "Test title", description: "Test content", one: "123",two:"123") }
       before(:each) do
         user = FactoryBot.create(:user)
         login_as(user)
@@ -126,11 +141,11 @@ end
 RSpec.feature "Projects", type: :feature do
 
     context "New Project" do
-      let(:project) { Project.create(title: "Test title", description: "Test content") }
+      let(:project) { Project.create(title: "Test title", description: "Test content", one: "123",two:"123") }
       before(:each) do
         user = FactoryBot.create(:user)
         login_as(user)
-        visit root_path
+        visit projects_path
       end
  
  
@@ -145,7 +160,7 @@ end
 
 RSpec.feature "HomePages", type: :feature do
     scenario "The visitor should see projects" do
-      visit root_path
+      visit projects_path
       expect(page).to have_text("PRPRO")
     end
   end
